@@ -1,0 +1,7 @@
+---
+- hosts: [webservers]
+  remote_user: root
+
+  tasks:  
+  - name: Restart Winbind Services
+    service: name=winbind enabled=yes state=restarted
